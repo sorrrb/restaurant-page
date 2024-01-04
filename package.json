@@ -1,10 +1,11 @@
 {
   "name": "restaurant-page",
   "version": "1.0.0",
-  "description": "(from The Odin Project curriculum)",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open",
     "build": "webpack"
   },
   "repository": {
@@ -18,9 +19,11 @@
   },
   "homepage": "https://github.com/sorrrb/restaurant-page#readme",
   "devDependencies": {
-    "css-loader": "^6.7.1",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

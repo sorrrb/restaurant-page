@@ -1,9 +1,17 @@
 import './style.css';
-import Image from './bg-image.jpg';
-import Icon from './logo.png';
-import FrontMedia from './fronthouse.jpg';
-import BackMedia from './backhouse.jpg';
-import DrinkMedia from './drink.jpg';
-import { onPageLoad } from './page-load';
+import Background from './assets/background.jpg';
+import loadMe from './pageload';
 
-onPageLoad();
+function component() {
+  const element = document.createElement('div');
+  const btn = document.createElement('button');
+
+  btn.onclick = loadMe;
+  btn.textContent = 'Button';
+
+  element.appendChild(btn);
+  return element;
+}
+
+document.body.appendChild(component());
+console.log('Testing');

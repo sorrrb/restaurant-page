@@ -1,2 +1,2 @@
-# ignore node modules dependencies contents
+# ignore node_modules to prevent syncing folder to GitHub
 node_modules
