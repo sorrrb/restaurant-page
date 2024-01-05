@@ -1,17 +1,11 @@
 import './style.css';
-import Background from './assets/background.jpg';
-import loadMe from './pageload';
+import pageLoad from './pageload';
 
-function component() {
-  const element = document.createElement('div');
-  const btn = document.createElement('button');
-
-  btn.onclick = loadMe;
-  btn.textContent = 'Button';
-
-  element.appendChild(btn);
-  return element;
+function init() {
+  const content = document.createElement('div');
+  content.id = 'content';
+  document.body.appendChild(content);
+  pageLoad();
 }
 
-document.body.appendChild(component());
-console.log('Testing');
+init(); // Handle initial pageload

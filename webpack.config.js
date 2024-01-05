@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 module.exports = {
   mode: 'development',
@@ -15,6 +16,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Development',
     }),
+    new NodePolyfillPlugin()
   ],
   output: {
     filename: '[name].bundle.js',
@@ -36,4 +38,9 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    fallback: {
+        "fs": false
+    },
+  }
 };
