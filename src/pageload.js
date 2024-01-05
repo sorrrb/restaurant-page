@@ -1,3 +1,5 @@
+import footLogo from './assets/github-mark.png';
+
 // Helper - generate header
 function createHead(headClass, logoText) {
   const header = document.createElement('header');
@@ -25,7 +27,7 @@ function createNav(navClass) {
   nav.classList.add(navClass);
 
   const homeBtn = createBtn('home-btn', 'Home');
-  const menuBtn = createBtn('nav-btn', 'Menu');
+  const menuBtn = createBtn('menu-btn', 'Menu');
   const contactBtn = createBtn('contact-btn', 'Contact');
 
   nav.appendChild(homeBtn);
@@ -46,10 +48,21 @@ function createFoot(footClass) {
   const footer = document.createElement('footer');
   footer.classList.add(footClass);
 
+  const source = document.createElement('a');
+  source.classList.add('footer-source');
+  source.href = 'https://github.com/sorrrb';
+
+  const gitHubLink = new Image();
+  gitHubLink.src = footLogo;
+  gitHubLink.classList.add('footer-logo')
+  source.appendChild(gitHubLink);
+
   const footerText = document.createElement('p');
   footerText.classList.add('foot-text');
-  footerText.textContent = 'Made by sorrrb';
-  footer.appendChild(footerText);
+  footerText.textContent = 'sorrrb';
+  source.appendChild(footerText);
+
+  footer.appendChild(source);
   return footer;
 }
 
@@ -57,7 +70,7 @@ function createFoot(footClass) {
 function loadPage() {
   const content = document.getElementById('content');
 
-  const header = createHead('header', 'Sample Restaurant');
+  const header = createHead('header', 'Sample Restaurant Page');
   content.appendChild(header);
 
   const main = createMain('page-content');

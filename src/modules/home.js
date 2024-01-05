@@ -1,4 +1,4 @@
-import Picture from '../assets/background.jpg';
+import Picture from '../assets/hero.jpg';
 
 function createHeroSection() {
   const hero = document.createElement('section');
@@ -6,12 +6,12 @@ function createHeroSection() {
 
   const heroTitle = document.createElement('h2');
   heroTitle.classList.add('section-title');
-  heroTitle.textContent = 'Sample Home Title';
+  heroTitle.textContent = 'Home';
   hero.appendChild(heroTitle);
 
   const para = document.createElement('p');
   para.classList.add('hero-para');
-  para.textContent = 'This is some sample text content for the home page hero paragraph!'
+  para.textContent = 'This is some sample text content for a home page!'
   hero.appendChild(para);
 
   const heroImg = new Image();
@@ -25,6 +25,12 @@ function createHeroSection() {
 function loadHome() {
   const content = document.querySelector('.page-content');
   content.textContent = '';
+
+  const tabSwitch = document.querySelector('button.active');
+  if (tabSwitch) tabSwitch.classList.toggle('active');
+
+  const activeTab = document.getElementById('home-btn');
+  activeTab.classList.add('active');
 
   const hero = createHeroSection();
 

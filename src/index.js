@@ -1,6 +1,8 @@
 import './style.css';
 import loadPage from './pageload';
 import loadHome from './modules/home';
+import loadMenu from './modules/menu';
+import loadContact from './modules/contact';
 
 // Handle tab listening logic
 // Get element references
@@ -8,12 +10,12 @@ import loadHome from './modules/home';
 // Modules replace logListen
 function addEventHandlers() {
   const home = document.getElementById('home-btn');
-  const nav = document.getElementById('nav-btn');
+  const nav = document.getElementById('menu-btn');
   const contact = document.getElementById('contact-btn');
 
   home.addEventListener('click', loadHome);
-  nav.addEventListener('click', logListen);
-  contact.addEventListener('click', logListen);
+  nav.addEventListener('click', loadMenu);
+  contact.addEventListener('click', loadContact);
 }
 
 function init() {

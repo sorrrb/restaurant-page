@@ -5,11 +5,21 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url(./assets/brick-bg.jpg);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 button:hover {
   cursor: pointer;
 }
+
+
 
 #content {
   display: flex;
@@ -17,27 +27,45 @@ button:hover {
   flex: 1;
 }
 
+
+
+.header, .footer {
+  background-color: #622720;
+}
+
 .header {
-  padding-inline: 16px;
+  padding-inline: 32px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.header > h1 {
+  font-size: 2.5rem;
+}
+
 .nav {
   display: flex;
-  gap: 16px;
+  gap: 48px;
 }
 
 .nav > button {
-  padding: 4px 12px;
+  padding: 8px 20px;
 
   border: 1px solid black;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
+
+nav > .active {
+  border: 1px solid #efefef;
+  color: #efefef;
+  background-color: black;
+}
+
+
 
 .page-content {
   flex: 1;
@@ -47,6 +75,40 @@ button:hover {
   text-align: center;
 }
 
+.hero {
+  margin: 24px 0;
+  padding: 0 16px;
+
+  background-color: #622720;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+}
+
+.hero > img {
+  border: 1px solid #efefef;
+  border-radius: 4px;
+}
+
+
+
 .footer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 1.125rem;
+}
+
+.footer-source {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo {
+  height: 25px;
+}
+
+.foot-text {
+  font-weight: bold;
 }
