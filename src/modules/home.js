@@ -6,12 +6,12 @@ function createHeroSection() {
 
   const heroTitle = document.createElement('h2');
   heroTitle.classList.add('section-title');
-  heroTitle.textContent = 'Home';
+  heroTitle.textContent = 'Bedrock & Java Menus';
   hero.appendChild(heroTitle);
 
   const para = document.createElement('p');
   para.classList.add('hero-para');
-  para.textContent = 'This is some sample text content for a home page!'
+  para.textContent = 'Get the best food Minecraft has to offer here!'
   hero.appendChild(para);
 
   const heroImg = new Image();

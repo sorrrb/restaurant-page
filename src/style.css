@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./assets/minecraft.ttf');
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +12,9 @@ body {
   flex-direction: column;
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-image: url(./assets/brick-bg.jpg);
+  background-image: url(./assets/hero-bg.jpg);
+  background-size: cover;
+  backdrop-filter: blur(8px);
 }
 
 a {
@@ -30,7 +37,7 @@ button:hover {
 
 
 .header, .footer {
-  background-color: #622720;
+  background-image: url(./assets/header-bg.jpg);
 }
 
 .header {
@@ -39,10 +46,15 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
 }
 
 .header > h1 {
   font-size: 2.5rem;
+}
+
+.header > h1, .nav > button {
+  font-family: 'MyFont';
 }
 
 .nav {
@@ -56,13 +68,14 @@ button:hover {
   border: 1px solid black;
   border-radius: 4px;
   font-size: 1.25rem;
-  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 nav > .active {
-  border: 1px solid #efefef;
-  color: #efefef;
-  background-color: black;
+  border: 1px solid black;
+  color: black;
+  background-color: #9dcdfb50;
+  backdrop-filter: blur(4px);
 }
 
 
@@ -79,9 +92,10 @@ nav > .active {
   margin: 24px 0;
   padding: 0 16px;
 
-  background-color: #622720;
+  background-color: #00000015;
   border: 1px solid #efefef;
   border-radius: 4px;
+  color: #efefef;
 }
 
 .hero > img {
@@ -97,6 +111,8 @@ nav > .active {
   align-items: center;
   
   font-size: 1.125rem;
+  border-top: 2px solid #5a9332;
+  background-position: bottom;
 }
 
 .footer-source {
