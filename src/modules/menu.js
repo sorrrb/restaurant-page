@@ -1,4 +1,6 @@
-import Picture from '../assets/food.jpg';
+import Apple from '../assets/apple.png';
+import EnchantedApple from '../assets/enchanted-apple.png';
+import GoldenApple from '../assets/golden-apple.png';
 
 function createMenuSection() {
   const hero = document.createElement('section');
@@ -9,15 +11,20 @@ function createMenuSection() {
   heroTitle.textContent = 'Menu';
   hero.appendChild(heroTitle);
 
-  const para = document.createElement('p');
-  para.classList.add('hero-para');
-  para.textContent = 'This is some sample text content for a menu page!'
-  hero.appendChild(para);
+  const apple = new Image();
+  apple.src = Apple;
+  apple.height = 25;
+  hero.appendChild(apple);
 
-  const heroImg = new Image();
-  heroImg.src = Picture;
-  heroImg.height = 600;
-  hero.appendChild(heroImg);
+  const enchantedApple = new Image();
+  enchantedApple.src = EnchantedApple;
+  enchantedApple.height = 25;
+  hero.appendChild(enchantedApple);
+
+  const goldenApple = new Image();
+  goldenApple.src = GoldenApple;
+  goldenApple.height = 25;
+  hero.appendChild(goldenApple);
 
   return hero;
 }
