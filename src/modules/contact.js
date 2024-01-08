@@ -9,6 +9,10 @@ function createMenuSection() {
   heroTitle.textContent = 'Contact';
   hero.appendChild(heroTitle);
 
+  const divider = document.createElement('hr');
+  divider.classList.add('divider');
+  hero.appendChild(divider);
+
   const para = document.createElement('p');
   para.classList.add('hero-para');
   para.textContent = 'This is some sample text content for a contact page!'

@@ -9,6 +9,10 @@ function createHeroSection() {
   heroTitle.textContent = 'Bedrock & Java Menus';
   hero.appendChild(heroTitle);
 
+  const divider = document.createElement('hr');
+  divider.classList.add('divider');
+  hero.appendChild(divider);
+
   const para = document.createElement('p');
   para.classList.add('hero-para');
   para.textContent = 'Get the best food Minecraft has to offer here!'

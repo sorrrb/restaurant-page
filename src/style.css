@@ -3,6 +3,10 @@
   src: url('./assets/minecraft.ttf');
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -37,7 +41,7 @@ button:hover {
 
 
 .header, .footer {
-  background-image: url(./assets/header-bg.jpg);
+  background-image: url(./assets/head-foot-bg.jpg);
 }
 
 .header {
@@ -102,9 +106,53 @@ nav > .active {
   color: #efefef;
 }
 
+.divider {
+  width: 50%;
+}
+
+.hero-menu {
+  margin-block-end: 0.83em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 24px;
+  row-gap: 8px;
+  justify-content: start;
+}
+
+.menu-card {
+  padding-inline: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #295791;
+  border-radius: 4px;
+  border: 1px solid #efefef;
+}
+
+.menu-card:nth-of-type(1), .menu-card:nth-of-type(4), .menu-card:nth-of-type(5), .menu-card:nth-of-type(8), .menu-card:nth-of-type(9), .menu-card:nth-of-type(12) {
+  background-color: #c75a35;
+}
+
 .hero > img {
   border: 1px solid #efefef;
   border-radius: 4px;
+}
+
+.card-left, .card-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-left {
+  align-items: start;
+}
+
+.card-left > h4 {
+  margin: 0;
+}
+
+.card-right {
+  align-items: end;
 }
 
 

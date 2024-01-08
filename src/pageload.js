@@ -70,7 +70,7 @@ function createFoot(footClass) {
 function loadPage() {
   const content = document.getElementById('content');
 
-  const header = createHead('header', 'Minecraft Restaurant');
+  const header = createHead('header', 'Yours & Mine: Craft Cuisine');
   content.appendChild(header);
 
   const main = createMain('page-content');
