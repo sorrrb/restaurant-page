@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'InterfaceFont';
-  src: url(./assets/minecraft.otf), url(./assets/minecraft-italic.otf), url(./assets/minecraft-bold.otf), url(./assets/minecraft-bold-italic.otf);
+  src: url('./assets/minecraft.otf'), url('./assets/minecraft-italic.otf'), url('./assets/minecraft-bold.otf'), url('./assets/minecraft-bold-italic.otf');
 }
 
 * {
@@ -125,10 +125,6 @@ nav > .active {
   border: 1px solid #efefef;
   border-radius: 4px;
   color: #efefef;
-}
-
-.hero-contact-lay {
-  justify-content: start;
 }
 
 .divider {
