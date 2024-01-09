@@ -14,12 +14,60 @@ function createMenuSection() {
   divider.classList.add('divider');
   heroHeader.appendChild(divider);
 
-  hero.appendChild(heroHeader);
+  const heroFormInfo = document.createElement('div');
+  heroFormInfo.classList.add('hero-form');
 
   const para = document.createElement('p');
   para.classList.add('hero-para');
-  para.textContent = 'This is some sample text content for a contact page!'
-  hero.appendChild(para);
+  para.textContent = 'Need to contact us? Fill out this form below:'
+  heroFormInfo.appendChild(para);
+
+  const formFields = ['Username', 'First Name', 'Last Name', 'Email Address', 'Phone Number', 'Message'];
+  const form = createForm(formFields);
+  form.classList.add('contact-form');
+
+  function createForm(inputArray) {
+    const output = document.createElement('form');
+    inputArray.forEach((field) => {
+      if (field === 'Message') {
+        const messageLabel = document.createElement('label');
+        messageLabel.textContent = `${field}:`;
+        const messageInput = document.createElement('textarea');
+        messageInput.rows = 8;
+        output.appendChild(messageLabel);
+        output.appendChild(messageInput);
+      }
+      else {
+        const formLabel = document.createElement('label');
+        formLabel.textContent = `${field}:`;
+        const formInput = document.createElement('input');
+        formInput.type = 'text';
+        formInput.size = 30;
+        output.appendChild(formLabel);
+        output.appendChild(formInput);
+      }
+    });
+
+    return output;
+  }
+
+  const submitBtn = document.createElement('input');
+  submitBtn.type = 'submit';
+  submitBtn.classList.add('form-button');
+  submitBtn.textContent = 'Submit';
+
+  heroFormInfo.appendChild(form);
+  heroFormInfo.append(submitBtn);
+
+  heroHeader.appendChild(heroFormInfo);
+
+  hero.appendChild(heroHeader);
+
+  const disclaimer = document.createElement('p');
+  disclaimer.classList.add('form-disclaimer');
+  disclaimer.textContent = '*Please allow at least 7 business days for a timely response*';
+
+  hero.appendChild(disclaimer);
 
   return hero;
 }
