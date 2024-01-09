@@ -1,27 +1,25 @@
-import Picture from '../assets/contact.png';
-
 function createMenuSection() {
   const hero = document.createElement('section');
   hero.classList.add('hero');
 
+  const heroHeader = document.createElement('div');
+  heroHeader.classList.add('hero-head');
+
   const heroTitle = document.createElement('h2');
   heroTitle.classList.add('section-title');
   heroTitle.textContent = 'Contact';
-  hero.appendChild(heroTitle);
+  heroHeader.appendChild(heroTitle);
 
   const divider = document.createElement('hr');
   divider.classList.add('divider');
-  hero.appendChild(divider);
+  heroHeader.appendChild(divider);
+
+  hero.appendChild(heroHeader);
 
   const para = document.createElement('p');
   para.classList.add('hero-para');
   para.textContent = 'This is some sample text content for a contact page!'
   hero.appendChild(para);
-
-  const heroImg = new Image();
-  heroImg.src = Picture;
-  heroImg.height = 600;
-  hero.appendChild(heroImg);
 
   return hero;
 }

@@ -15,14 +15,34 @@ function createMenuSection() {
   const hero = document.createElement('section');
   hero.classList.add('hero');
 
+  const heroHeader = document.createElement('div');
+  heroHeader.classList.add('hero-head');
+
   const heroTitle = document.createElement('h2');
   heroTitle.classList.add('section-title');
   heroTitle.textContent = 'Menu';
-  hero.appendChild(heroTitle);
+  heroHeader.appendChild(heroTitle);
 
   const divider = document.createElement('hr');
   divider.classList.add('divider');
-  hero.appendChild(divider);
+  heroHeader.appendChild(divider);
+
+  hero.appendChild(heroHeader);
+
+  const menuNoticeContainer = document.createElement('div');
+  menuNoticeContainer.classList.add('menu-text-container');
+
+  const menuNotice = document.createElement('p');
+  menuNotice.classList.add('menu-notice');
+  menuNotice.textContent = 'Please be advised that food prepared here may contain these ingredients:'
+
+  const menuNoticeItems = document.createElement('p');
+  menuNoticeItems.classList.add('menu-warning');
+  menuNoticeItems.textContent = 'milk, eggs, wheat, soybean, peanuts, tree nuts, fish, and shellfish';
+
+  menuNoticeContainer.appendChild(menuNotice);
+  menuNoticeContainer.appendChild(menuNoticeItems);
+  hero.appendChild(menuNoticeContainer);
 
   const cardContainer = document.createElement('div');
   cardContainer.classList.add('hero-menu');

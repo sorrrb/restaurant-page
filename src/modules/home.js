@@ -1,27 +1,25 @@
-import Picture from '../assets/hero.jpg';
-
 function createHeroSection() {
   const hero = document.createElement('section');
   hero.classList.add('hero');
 
+  const heroHeader = document.createElement('div');
+  heroHeader.classList.add('hero-head');
+
   const heroTitle = document.createElement('h2');
   heroTitle.classList.add('section-title');
-  heroTitle.textContent = 'Bedrock & Java Menus';
-  hero.appendChild(heroTitle);
+  heroTitle.textContent = 'Bedrock & Java Menus Available!';
+  heroHeader.appendChild(heroTitle);
 
   const divider = document.createElement('hr');
   divider.classList.add('divider');
-  hero.appendChild(divider);
+  heroHeader.appendChild(divider);
+
+  hero.appendChild(heroHeader);
 
   const para = document.createElement('p');
   para.classList.add('hero-para');
   para.textContent = 'Get the best food Minecraft has to offer here!'
   hero.appendChild(para);
-
-  const heroImg = new Image();
-  heroImg.src = Picture;
-  heroImg.height = 600;
-  hero.appendChild(heroImg);
 
   return hero;
 }
