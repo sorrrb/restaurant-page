@@ -8,18 +8,12 @@
   src: url(./assets/minecraft.otf), url(./assets/minecraft-italic.otf), url(./assets/minecraft-bold.otf), url(./assets/minecraft-bold-italic.otf);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 ::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  display: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,7 +40,7 @@ a {
   color: inherit;
 }
 
-button:hover {
+button:hover, a:hover {
   cursor: pointer;
 }
 
@@ -121,7 +115,7 @@ nav > .active {
   margin: 24px 0;
   padding: 16px;
 
-  width: 75%;
+  min-width: 75%;
 
   display: flex;
   flex-direction: column;
@@ -139,6 +133,57 @@ nav > .active {
 .hero-head {
   margin: 0;
   padding: 0;
+}
+
+.hero-para-title {
+  text-decoration: underline;
+}
+
+.hero-slide-text {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 32px;
+  font-size: 1.25rem;
+}
+
+.hero-slide {
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.hero-slide-active {
+  display: block;
+}
+
+.hero-slide-active img {
+  border: 1px solid white;
+  position: relative;
+  z-index: -1;
+}
+
+.hero-slide-image {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-slide-next, .hero-slide-previous {
+  top: 8px;
+  position: relative;
+  padding: 2px 6px 6px 6px;
+  border: 1px solid white;
+  border-radius: 8px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.hero-slide-next {
+  left: 24px;
+}
+
+.hero-slide-previous {
+  right: 24px;
 }
 
 .hero-menu {
