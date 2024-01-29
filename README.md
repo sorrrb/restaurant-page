@@ -1,4 +1,11 @@
-### Attributions
+# restaurant-page
+
+A restaurant page implemented using vanilla JavaScript & built with webpack.
+
+## Live Demo
+[Demo](https://sorrrb.github.io/restaurant-page/)
+
+## Attributions
 
 - [Header background by JabJabJab via DeviantArt](https://www.deviantart.com/jabjabjab/art/Minecraft-Background-Sea-182073907)
 - [Footer background by JabJabJab via DeviantArt](https://www.deviantart.com/jabjabjab/art/Minecraft-Background-Grass-182073652)
